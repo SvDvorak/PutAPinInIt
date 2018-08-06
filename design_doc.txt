@@ -1,0 +1,22 @@
+Pin in grenades with physics? (Put a Pin In It eller Pull My Pin)
+
+
+Put a Pin In It
+Idea credit to Joel Setterberg
+Grenades are popping out pins on their own, put them back before they explode in your face!
+
+Background
+You work at a Wrenkler & Sons Things That Go Boom (TM) workshop, at the lowest rung where the defective grenades are tossed. These grenades just keep becoming self aware and pop their pins. One could say they have very explosive personalities. Why are they not just dismantled? Good question!
+
+Gameplay
+Put pins back in grenades before they explode with continously increasing number of active grenades with no end limit. High score based on number of active grenades, require a specific number completed for brother to get present?
+
+Mechanics
+You control a hand with physically reactive pins on his finger and you have to drop them into the grenade pin holes by moving the hand in 3D space and lowering it down. Movement makes the pins swing or slide along the finger which complicates it. Possibly dropping of the finger as well? Either popped pins go onto finger automatically or you pick them up (would be nicer that way), either way you can have multiple ones dangling at the same time. Mouse moves in horizontal space and mouse clicks move up and down.
+
+Design
+Graphics will be kinda simple, no realistic textures but not super low poly either. Smoothly shaded without much texture except accents. Hand is realistically shaped but only showing slight details like "rynkor". Grenades look innocent and dull enough until they spring to life where they get a face and mouth. They react to how close you are; when they've just become alive they are hyperactive and happy but as soon as you get close to them with your pins (or theirs really) they get angry or scared, screaming and yelling at you. This is all voiced of course, hopefully with different personalities on each (like the Calibration Spheres in The Lab). Some kind of visual indication on when a grenade will blow. 
+
+Questions:
+Do you pick up pins as well?
+Are grenades rigidbodies as well? Meaning, can you bump them or accidentally rotate them? (should always be able to put in pin och require manual rotation?)Maybe the grenade itself counts down to when it will blow up (that would be awesome)?
