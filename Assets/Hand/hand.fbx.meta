@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: 73eff02e0a35c9142a61dd604e385776
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Armature
+    100004: Hand_1
+    100006: Hand_2
+    100008: hand_man:polySurface1 group1
+    100010: Index_1
+    100012: Index_2
+    100014: Index_3
+    100016: Index_3_end
+    100018: Index_control
+    100020: Index_control_end
+    100022: Middle_1
+    100024: Middle_2
+    100026: Middle_3
+    100028: Middle_3_end
+    100030: Middle_control
+    100032: Middle_control_end
+    100034: Pinky_1
+    100036: Pinky_2
+    100038: Pinky_3
+    100040: Pinky_3_end
+    100042: Pinky_control
+    100044: Pinky_control_end
+    100046: Ring_1
+    100048: Ring_2
+    100050: Ring_3
+    100052: Ring_3_end
+    100054: Ring_control
+    100056: Ring_control_end
+    100058: Thumb_1
+    100060: Thumb_2
+    100062: Thumb_2_end
+    100064: Thumb_control
+    100066: Thumb_control_end
+    400000: //RootNode
+    400002: Armature
+    400004: Hand_1
+    400006: Hand_2
+    400008: hand_man:polySurface1 group1
+    400010: Index_1
+    400012: Index_2
+    400014: Index_3
+    400016: Index_3_end
+    400018: Index_control
+    400020: Index_control_end
+    400022: Middle_1
+    400024: Middle_2
+    400026: Middle_3
+    400028: Middle_3_end
+    400030: Middle_control
+    400032: Middle_control_end
+    400034: Pinky_1
+    400036: Pinky_2
+    400038: Pinky_3
+    400040: Pinky_3_end
+    400042: Pinky_control
+    400044: Pinky_control_end
+    400046: Ring_1
+    400048: Ring_2
+    400050: Ring_3
+    400052: Ring_3_end
+    400054: Ring_control
+    400056: Ring_control_end
+    400058: Thumb_1
+    400060: Thumb_2
+    400062: Thumb_2_end
+    400064: Thumb_control
+    400066: Thumb_control_end
+    2100000: teeth_02_Under_JawSG
+    2300000: //RootNode
+    2300002: hand_man:polySurface1 group1
+    3300000: //RootNode
+    3300002: hand_man:polySurface1 group1
+    4300000: hand_man:polySurface1 group1
+    7400000: Armature|Idle
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: hand_man:polySurface1 group1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Hand_1
+    rootMotionBoneRotation: {x: 0.00000017881393, y: -0.00000032782555, z: -0.6946064,
+      w: 0.71939}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

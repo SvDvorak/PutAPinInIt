@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: 287b14b7256325145a102fef8dbb78d4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Armature
+    100004: Grenade
+    100006: Hand_1
+    100008: Hand_2
+    100010: hand_man_polySurface1_group1
+    100012: Index_1
+    100014: Index_2
+    100016: Index_3
+    100018: Index_control
+    100020: Middle_1
+    100022: Middle_2
+    100024: Middle_3
+    100026: Middle_control
+    100028: Pin
+    100030: Pinky_1
+    100032: Pinky_2
+    100034: Pinky_3
+    100036: Pinky_control
+    100038: PinRing
+    100040: Ring_1
+    100042: Ring_2
+    100044: Ring_3
+    100046: Ring_control
+    100048: Thumb_1
+    100050: Thumb_2
+    100052: Thumb_control
+    100054: Cube
+    400000: //RootNode
+    400002: Armature
+    400004: Grenade
+    400006: Hand_1
+    400008: Hand_2
+    400010: hand_man_polySurface1_group1
+    400012: Index_1
+    400014: Index_2
+    400016: Index_3
+    400018: Index_control
+    400020: Middle_1
+    400022: Middle_2
+    400024: Middle_3
+    400026: Middle_control
+    400028: Pin
+    400030: Pinky_1
+    400032: Pinky_2
+    400034: Pinky_3
+    400036: Pinky_control
+    400038: PinRing
+    400040: Ring_1
+    400042: Ring_2
+    400044: Ring_3
+    400046: Ring_control
+    400048: Thumb_1
+    400050: Thumb_2
+    400052: Thumb_control
+    400054: Cube
+    2100000: unnamed
+    2100002: teeth_02_Under_JawSG
+    2300000: //RootNode
+    2300002: Grenade
+    2300004: hand_man_polySurface1_group1
+    2300006: Pin
+    2300008: PinRing
+    2300010: Cube
+    3300000: //RootNode
+    3300002: Grenade
+    3300004: hand_man_polySurface1_group1
+    3300006: Pin
+    3300008: PinRing
+    3300010: Cube
+    4300000: Sphere
+    4300002: hand_man_polySurface1_group1
+    4300004: Pin
+    4300006: PinRing
+    4300008: Grenade
+    4300010: Cube
+    7400000: Default Take
+    7400002: Idle
+    9500000: //RootNode
+    13700000: hand_man_polySurface1_group1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
