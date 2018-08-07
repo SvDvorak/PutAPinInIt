@@ -552,15 +552,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1234298661656702}
-  m_LocalRotation: {x: -0.00000005960465, y: -0.7071068, z: 0.00000005960465, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.04517562, y: 0.14250644, z: 0.051794622, w: 0.9874049}
+  m_LocalPosition: {x: -10.897034, y: -10.925606, z: 1.9384336}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4294840905305752}
   - {fileID: 4279426670470350}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
+  m_LocalEulerAnglesHint: {x: -5.9680004, y: 16.156, z: 5.1580005}
 --- !u!4 &4704276139171614
 Transform:
   m_ObjectHideFlags: 1
@@ -820,7 +820,7 @@ HingeJoint:
   m_Anchor: {x: 0.41, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000059604645, y: -0.15999985, z: 0.00000005008843}
+  m_ConnectedAnchor: {x: -0.00000005401671, y: -0.16, z: -0.00000031478703}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -856,6 +856,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsLockedInGrenade: 0
+  IsMovingABunch: 0
+  PinRigidbody: {fileID: 54212111630971010}
 --- !u!136 &136056395262692466
 CapsuleCollider:
   m_ObjectHideFlags: 1

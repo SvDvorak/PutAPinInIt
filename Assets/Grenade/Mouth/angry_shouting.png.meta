@@ -1,10 +1,14 @@
 fileFormatVersion: 2
-guid: 16f1b726989734440aa1c324a555cf7a
+guid: 6baa455380bf30f4aa27440c681478e4
 TextureImporter:
   fileIDToRecycleName:
-    21300000: idle_0
-    21300002: idle_1
-    21300004: idle_2
+    21300000: angry_shouting_0
+    21300002: angry_shouting_1
+    21300004: angry_shouting_2
+    21300006: angry_shouting_3
+    21300008: angry_shouting_4
+    21300010: angry_shouting_5
+    21300012: angry_shouting_6
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -109,7 +113,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_0
+      name: angry_shouting_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12afbe281405794f8998b901782050c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angry_shouting_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e5119228da9d84ab9129998b40ec8a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angry_shouting_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ec3b93d78ae9a4cb5406d47baf7406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angry_shouting_3
       rect:
         serializedVersion: 2
         x: 0
@@ -123,13 +187,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2f6f80fcac5e9f4fa4bc1d8e90c8b7d
+      spriteID: fa9761336fc21994f80907c0dff56d07
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_1
+      name: angry_shouting_4
       rect:
         serializedVersion: 2
         x: 512
@@ -143,13 +207,33 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 388acfa25d6f58842a59d0b976306c5b
+      spriteID: 5422255e2b6552e429c7c3f7d37fde5e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_2
+      name: angry_shouting_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0280b58f78285342aa4c818d3c769be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angry_shouting_6
       rect:
         serializedVersion: 2
         x: 0
@@ -163,7 +247,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7f53a7ac5669724a81d85328f6f3029
+      spriteID: baf544bdec5740d4595cc5e1fa1e0a59
       vertices: []
       indices: 
       edges: []
@@ -171,7 +255,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e117c053790189a49adb82cf4ec97417
+    spriteID: 09b1346ad8518754888cfa0a16e8f1d6
     vertices: []
     indices: 
     edges: []

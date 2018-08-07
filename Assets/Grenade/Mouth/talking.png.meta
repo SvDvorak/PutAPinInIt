@@ -1,10 +1,14 @@
 fileFormatVersion: 2
-guid: 16f1b726989734440aa1c324a555cf7a
+guid: 587c2419da6882d42a1937536ecedfe3
 TextureImporter:
   fileIDToRecycleName:
-    21300000: idle_0
-    21300002: idle_1
-    21300004: idle_2
+    21300000: talking_0
+    21300002: talking_1
+    21300004: talking_2
+    21300006: talking_3
+    21300008: talking_4
+    21300010: talking_5
+    21300012: talking_6
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -109,7 +113,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_0
+      name: talking_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4bc448caa2eda438cc6591a80089e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: talking_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f8b22a23b84fb4fb055e7765244cb8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: talking_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c12f72cadb5dd42aebec3e99061fcc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: talking_3
       rect:
         serializedVersion: 2
         x: 0
@@ -123,13 +187,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2f6f80fcac5e9f4fa4bc1d8e90c8b7d
+      spriteID: 15caf50a511b1cf4e97855f1faef8456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_1
+      name: talking_4
       rect:
         serializedVersion: 2
         x: 512
@@ -143,13 +207,33 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 388acfa25d6f58842a59d0b976306c5b
+      spriteID: b94437ae98f3b004f8feeb9883bfbe98
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_2
+      name: talking_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26f9afee76a7cb4084bd8449a5592f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: talking_6
       rect:
         serializedVersion: 2
         x: 0
@@ -163,7 +247,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7f53a7ac5669724a81d85328f6f3029
+      spriteID: 64008a4d3c9f48a4092358162ede8009
       vertices: []
       indices: 
       edges: []
@@ -171,7 +255,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e117c053790189a49adb82cf4ec97417
+    spriteID: 84ef367ad8224d94d9ca99b39efefb32
     vertices: []
     indices: 
     edges: []

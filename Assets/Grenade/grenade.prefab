@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4368023138966500}
+  - component: {fileID: 114813228180741684}
   m_Layer: 0
   m_Name: face
   m_TagString: Untagged
@@ -200,8 +201,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1823472383229976}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.041, y: 0, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 2.46, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4324231760528450}
@@ -435,6 +436,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HoleCenter: {fileID: 4716723505880350}
   Force: 10
+--- !u!114 &114813228180741684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197492184324448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63737cc0dd538941994657885043790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EyeLeft: {fileID: 95080587732643450}
+  EyeRight: {fileID: 95073327607462732}
+  Mouth: {fileID: 95741462243044598}
+  BlinkTime: 3
 --- !u!114 &114865803673739428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -561,7 +577,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 799f37263deca3c45a9ead58d03c98c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b1fadb7657d36b43a161ef178489f23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -607,7 +623,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 799f37263deca3c45a9ead58d03c98c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b1fadb7657d36b43a161ef178489f23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
