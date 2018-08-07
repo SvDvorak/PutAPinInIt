@@ -2,13 +2,18 @@
 
 public class GrenadePinTrigger : MonoBehaviour
 {
-    public bool PinTriggered;
+    private GrenadeLogic _grenadeLogic;
+
+    public void Start()
+    {
+        _grenadeLogic = GetComponentInParent<GrenadeLogic>();
+    }
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 9)
         {
-            PinTriggered = true;
+            _grenadeLogic.IsPinTriggered = true;
             other.gameObject.GetComponentInParent<PinState>().IsLockedInGrenade = true;
         }
     }
@@ -17,7 +22,7 @@ public class GrenadePinTrigger : MonoBehaviour
     {
         if (other.gameObject.layer == 9)
         {
-            PinTriggered = false;
+            _grenadeLogic.IsPinTriggered = false;
             other.gameObject.GetComponentInParent<PinState>().IsLockedInGrenade = false;
         }
     }

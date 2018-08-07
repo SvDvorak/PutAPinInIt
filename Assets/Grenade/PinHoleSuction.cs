@@ -15,7 +15,7 @@ public class PinHoleSuction : MonoBehaviour
 
     }
 
-    private void OnTriggerStay(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.layer == 9)
         {

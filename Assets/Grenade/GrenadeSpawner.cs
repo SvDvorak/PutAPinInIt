@@ -4,6 +4,7 @@ public class GrenadeSpawner : MonoBehaviour
 {
     public GameObject GrenadeTemplate;
     public float SpawnTime;
+    public float Force;
     public Transform Spawn1;
     public Transform Spawn2;
 
@@ -30,7 +31,7 @@ public class GrenadeSpawner : MonoBehaviour
         var grenade = Instantiate(GrenadeTemplate, spawn.position, Random.rotation);
         var rigidBody = grenade.GetComponent<Rigidbody>();
 
-        rigidBody.AddForce((spawn.right + Vector3.up)*5, ForceMode.Impulse);
+        rigidBody.AddForce((spawn.right + Vector3.up)*Force, ForceMode.Impulse);
         rigidBody.AddTorque(Random.insideUnitSphere*5, ForceMode.Impulse);
     }
 }
