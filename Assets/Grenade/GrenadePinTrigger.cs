@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GrenadePinTriggerPoint : MonoBehaviour
+public class GrenadePinTrigger : MonoBehaviour
 {
     public bool PinTriggered;
 
