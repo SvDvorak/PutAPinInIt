@@ -16,7 +16,7 @@ public class GrenadeLogic : MonoBehaviour
         var rotation = Quaternion.RotateTowards(_rigidbody.rotation, Quaternion.identity, 1080 * Time.deltaTime);
         var angle = Vector3.SignedAngle(transform.forward, Vector3.up, transform.right);
 
-        _rigidbody.AddTorque(rotation * Vector3.right * 40, ForceMode.Acceleration);
+        //_rigidbody.AddTorque(rotation * Vector3.right * 40, ForceMode.Acceleration);
         //_rigidbody.MoveRotation(_rigidbody.rotation * Quaternion.AngleAxis(angle * 0.1f, transform.right));
     }
 }
