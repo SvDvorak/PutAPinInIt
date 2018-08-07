@@ -13,6 +13,7 @@ public class PickupPin : MonoBehaviour
             var isLockedInGrenade = other.gameObject.GetComponentInParent<PinState>().IsLockedInGrenade;
             if(!isLockedInGrenade)
             {
+                other.attachedRigidbody.MoveRotation(transform.rotation);
                 other.attachedRigidbody.MovePosition(FingerPinHangPoint.position);
             }
         }

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GrenadeLogic : MonoBehaviour
 {
@@ -7,7 +6,12 @@ public class GrenadeLogic : MonoBehaviour
     public Transform PinHoleCenter;
     public GameObject Face;
     public GameObject PinTemplate;
-    public List<GameObject> SuctionFields;
+
+    public float ExplodeTime;
+    [HideInInspector]
+    public bool TimerActive;
+    public bool HasExploded;
+    private float _explodeTimer;
 
     private Rigidbody _rigidbody;
     public Rigidbody ActivePin;
@@ -35,6 +39,22 @@ public class GrenadeLogic : MonoBehaviour
 
         //_rigidbody.AddTorque(rotation * Vector3.right * 40, ForceMode.Acceleration);
         //_rigidbody.MoveRotation(_rigidbody.rotation * Quaternion.AngleAxis(angle * 0.1f, transform.right));
+
+        if (ActivePin == null && !TimerActive)
+        {
+            TimerActive = true;
+            _explodeTimer = Time.time + ExplodeTime;
+        }
+        if (ActivePin != null && TimerActive)
+        {
+            TimerActive = false;
+        }
+
+        if (TimerActive && _explodeTimer < Time.time)
+        {
+            HasExploded = true;
+            Debug.Log("GAME OVER MAN");
+        }
 
         if (_pushOutPin && ActivePin != null)
         {
