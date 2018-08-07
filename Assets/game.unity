@@ -896,35 +896,6 @@ CapsuleCollider:
   m_Height: 1.06
   m_Direction: 1
   m_Center: {x: 0, y: 0.54, z: -0.02}
---- !u!1 &1432634170
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1432634171}
-  m_Layer: 0
-  m_Name: grenades
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1432634171
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1432634170}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 406707438}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1501938977
 Prefab:
   m_ObjectHideFlags: 0
@@ -1004,6 +975,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 73eff02e0a35c9142a61dd604e385776, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73eff02e0a35c9142a61dd604e385776, type: 3}
   m_IsPrefabAsset: 0
@@ -1012,7 +987,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1432634171}
+    m_TransformParent: {fileID: 1672594196}
     m_Modifications:
     - target: {fileID: 4418477067896652, guid: 74d0cc1b1f35b094fa3bab6ca104e1d9, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1028,27 +1003,39 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4418477067896652, guid: 74d0cc1b1f35b094fa3bab6ca104e1d9, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4418477067896652, guid: 74d0cc1b1f35b094fa3bab6ca104e1d9, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4418477067896652, guid: 74d0cc1b1f35b094fa3bab6ca104e1d9, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4418477067896652, guid: 74d0cc1b1f35b094fa3bab6ca104e1d9, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071067
       objectReference: {fileID: 0}
     - target: {fileID: 4418477067896652, guid: 74d0cc1b1f35b094fa3bab6ca104e1d9, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114887641223178618, guid: 74d0cc1b1f35b094fa3bab6ca104e1d9,
         type: 2}
       propertyPath: IsPinTriggered
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418477067896652, guid: 74d0cc1b1f35b094fa3bab6ca104e1d9, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418477067896652, guid: 74d0cc1b1f35b094fa3bab6ca104e1d9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823472383229976, guid: 74d0cc1b1f35b094fa3bab6ca104e1d9, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1169,7 +1156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GrenadeTemplate: {fileID: 1823472383229976, guid: 74d0cc1b1f35b094fa3bab6ca104e1d9,
     type: 2}
-  SpawnTime: 2
+  SpawnTime: 200
+  WokeTime: 100
   Force: 6
   Spawn1: {fileID: 510864469}
   Spawn2: {fileID: 82813242}
@@ -1185,8 +1173,9 @@ Transform:
   m_Children:
   - {fileID: 510864469}
   - {fileID: 82813242}
+  - {fileID: 406707438}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1804294284
 GameObject:

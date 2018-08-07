@@ -13,7 +13,7 @@ public class GrenadePinTrigger : MonoBehaviour
     {
         if (other.gameObject.layer == 9)
         {
-            _grenadeLogic.IsPinTriggered = true;
+            _grenadeLogic.ActivePin = other.attachedRigidbody;
             other.gameObject.GetComponentInParent<PinState>().IsLockedInGrenade = true;
         }
     }
@@ -22,7 +22,7 @@ public class GrenadePinTrigger : MonoBehaviour
     {
         if (other.gameObject.layer == 9)
         {
-            _grenadeLogic.IsPinTriggered = false;
+            _grenadeLogic.ActivePin = null;
             other.gameObject.GetComponentInParent<PinState>().IsLockedInGrenade = false;
         }
     }
