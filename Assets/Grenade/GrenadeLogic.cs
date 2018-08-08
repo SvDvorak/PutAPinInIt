@@ -13,9 +13,12 @@ public class GrenadeLogic : MonoBehaviour
     public bool HasExploded;
     private float _explodeTimer;
 
+    public float RewokeDelay;
+    private float _rewokeTimer;
+
     private Rigidbody _rigidbody;
     public Rigidbody ActivePin;
-    public bool IsAlive { get { return ActivePin == null; } }
+    public bool IsAlive { get { return ActivePin == null && _rewokeTimer < Time.time; } }
 
     private bool _pushOutPin;
 
@@ -39,10 +42,7 @@ public class GrenadeLogic : MonoBehaviour
             Debug.DrawRay(transform.position, transform.position + transform.forward, Color.white);
             Debug.DrawRay(transform.position, transform.position + Vector3.back, Color.green);
             if (Mathf.Abs(toCamera) > 90)
-            {
-                Debug.Log(toCamera);
                 _rigidbody.AddTorque(Vector3.up * toCamera * 0.05f, ForceMode.Force);
-            }
 
             var toUpAxis = Vector3.Cross(Vector3.up, transform.up);
             var faceUp = Vector3.SignedAngle(Vector3.up, transform.up, toUpAxis);
@@ -61,6 +61,7 @@ public class GrenadeLogic : MonoBehaviour
         if (!IsAlive && TimerActive)
         {
             TimerActive = false;
+            _rewokeTimer = Time.time + RewokeDelay;
         }
 
         if (TimerActive && _explodeTimer < Time.time)

@@ -681,6 +681,7 @@ MonoBehaviour:
   ExplodeTime: 40
   TimerActive: 0
   HasExploded: 0
+  RewokeDelay: 3
   ActivePin: {fileID: 0}
 --- !u!135 &135467042639172710
 SphereCollider:
