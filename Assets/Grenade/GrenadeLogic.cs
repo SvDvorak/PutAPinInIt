@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets;
+using UnityEngine;
 
 public class GrenadeLogic : MonoBehaviour
 {
@@ -69,9 +70,10 @@ public class GrenadeLogic : MonoBehaviour
         {
             HasExploded = true;
             Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
+            GameState.GameOver = true;
         }
 
-        if (_pushOutPin && !IsAlive)
+        if (_pushOutPin && !IsAlive && ActivePin != null)
         {
             ActivePin.AddForce(ActivePin.rotation * -Vector3.up * 10, ForceMode.Force);
             _rigidbody.AddForceAtPosition(-transform.up * 10, PinHoleCenter.position, ForceMode.Force);

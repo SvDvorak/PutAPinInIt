@@ -673,14 +673,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 470459b6cd4c7f845abca27f37ae5989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartWithPin: 0
+  StartWithPin: 1
   PinHoleCenter: {fileID: 4716723505880350}
   Face: {fileID: 1197492184324448}
   PinTemplate: {fileID: 1234298661656702, guid: 8fb85188e0160344fa86647d9580db49,
     type: 2}
   ExplosionPrefab: {fileID: 1266901156150754, guid: c45799fdd61da6f4fae3881cc0b9624e,
     type: 2}
-  ExplodeTime: 40
+  ExplodeTime: 20
   TimerActive: 0
   HasExploded: 0
   RewokeDelay: 3

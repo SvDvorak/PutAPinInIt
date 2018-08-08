@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Assets;
 using UnityEngine;
 
 public class GrenadesController : MonoBehaviour
@@ -18,14 +19,18 @@ public class GrenadesController : MonoBehaviour
 
     public void Start()
     {
-        _spawnTimer = Time.time + SpawnTime / 3;
-        _wokeTimer = Time.time + WokeTime;
+        _spawnTimer = 0;
+        _wokeTimer = Time.time + WokeTime / 3.0f;
 
         _grenades.AddRange(GetComponentsInChildren<GrenadeLogic>());
+        GameState.GrenadesSpawned = _grenades.Count;
     }
 
     public void Update()
     {
+        if (GameState.GameOver)
+            return;
+
         if (_spawnTimer < Time.time)
         {
             Spawn();
@@ -45,15 +50,18 @@ public class GrenadesController : MonoBehaviour
         var spawn = Random.value > 0.5f ? Spawn1 : Spawn2;
 
         var grenade = Instantiate(GrenadeTemplate, spawn.position, Quaternion.identity);
+        grenade.transform.parent = transform;
         var rigidBody = grenade.GetComponent<Rigidbody>();
-        _grenades.Add(grenade.GetComponent<GrenadeLogic>());
+        var grenadeLogic = grenade.GetComponent<GrenadeLogic>();
+        _grenades.Add(grenadeLogic);
+        GameState.GrenadesSpawned += 1;
 
         rigidBody.AddForce((spawn.right + Vector3.up) * Force, ForceMode.Impulse);
         rigidBody.AddTorque(Random.insideUnitSphere * 3, ForceMode.Impulse);
     }
 
     [ExposeMethodInEditor]
-    private void Woke()
+    public void Woke()
     {
         var grenade = _grenades
             .Where(x => !x.IsAlive)
