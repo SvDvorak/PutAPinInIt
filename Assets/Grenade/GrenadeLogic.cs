@@ -6,6 +6,7 @@ public class GrenadeLogic : MonoBehaviour
     public Transform PinHoleCenter;
     public GameObject Face;
     public GameObject PinTemplate;
+    public GameObject ExplosionPrefab;
 
     public float ExplodeTime;
     [HideInInspector]
@@ -64,10 +65,10 @@ public class GrenadeLogic : MonoBehaviour
             _rewokeTimer = Time.time + RewokeDelay;
         }
 
-        if (TimerActive && _explodeTimer < Time.time)
+        if (!HasExploded && TimerActive && _explodeTimer < Time.time)
         {
             HasExploded = true;
-            Debug.Log("GAME OVER MAN");
+            Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
         }
 
         if (_pushOutPin && !IsAlive)
