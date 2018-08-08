@@ -37,8 +37,25 @@ public class GrenadeLogic : MonoBehaviour
         var rotation = Quaternion.RotateTowards(_rigidbody.rotation, Quaternion.identity, 1080 * Time.deltaTime);
         var angle = Vector3.SignedAngle(transform.forward, Vector3.up, transform.right);
 
-        //_rigidbody.AddTorque(rotation * Vector3.right * 40, ForceMode.Acceleration);
-        //_rigidbody.MoveRotation(_rigidbody.rotation * Quaternion.AngleAxis(angle * 0.1f, transform.right));
+        if (ActivePin == null)
+        {
+            var toCamera = Vector3.SignedAngle(transform.forward, Vector3.back, Vector3.up);
+            Debug.DrawRay(transform.position, transform.position + transform.forward, Color.white);
+            Debug.DrawRay(transform.position, transform.position + Vector3.back, Color.green);
+            if (Mathf.Abs(toCamera) > 90)
+            {
+                Debug.Log(toCamera);
+                _rigidbody.AddTorque(Vector3.up * toCamera * 0.05f, ForceMode.Force);
+            }
+
+            var toUpAxis = Vector3.Cross(Vector3.up, transform.up);
+            var faceUp = Vector3.SignedAngle(Vector3.up, transform.up, toUpAxis);
+            if (Mathf.Abs(faceUp) > 45)
+                _rigidbody.AddRelativeTorque(toUpAxis * faceUp * 0.05f, ForceMode.Force);
+        }
+
+        _rigidbody.angularVelocity *= 0.95f;
+
 
         if (ActivePin == null && !TimerActive)
         {
@@ -59,9 +76,7 @@ public class GrenadeLogic : MonoBehaviour
         if (_pushOutPin && ActivePin != null)
         {
             ActivePin.AddForce(ActivePin.rotation * -Vector3.up * 10, ForceMode.Force);
-            WilDebug.DrawCoordinateSystem(transform);
             _rigidbody.AddForceAtPosition(-transform.up * 10, PinHoleCenter.position, ForceMode.Force);
-            //Debug.DrawLine(ActivePin.position, ActivePin.velocity, Color.green);
         }
         else
         {
