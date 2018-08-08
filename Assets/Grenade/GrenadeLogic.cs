@@ -15,6 +15,7 @@ public class GrenadeLogic : MonoBehaviour
 
     private Rigidbody _rigidbody;
     public Rigidbody ActivePin;
+    public bool IsAlive { get { return ActivePin == null; } }
 
     private bool _pushOutPin;
 
@@ -30,14 +31,9 @@ public class GrenadeLogic : MonoBehaviour
 
     public void Update()
     {
-        Face.SetActive(ActivePin == null);
+        Face.SetActive(IsAlive);
 
-        Debug.DrawLine(transform.position, transform.position + transform.up * 3, Color.red);
-        //Debug.DrawLine(transform.position, transform.position + Vector3.up * 3, Color.black);
-        var rotation = Quaternion.RotateTowards(_rigidbody.rotation, Quaternion.identity, 1080 * Time.deltaTime);
-        var angle = Vector3.SignedAngle(transform.forward, Vector3.up, transform.right);
-
-        if (ActivePin == null)
+        if (IsAlive)
         {
             var toCamera = Vector3.SignedAngle(transform.forward, Vector3.back, Vector3.up);
             Debug.DrawRay(transform.position, transform.position + transform.forward, Color.white);
@@ -57,12 +53,12 @@ public class GrenadeLogic : MonoBehaviour
         _rigidbody.angularVelocity *= 0.95f;
 
 
-        if (ActivePin == null && !TimerActive)
+        if (IsAlive && !TimerActive)
         {
             TimerActive = true;
             _explodeTimer = Time.time + ExplodeTime;
         }
-        if (ActivePin != null && TimerActive)
+        if (!IsAlive && TimerActive)
         {
             TimerActive = false;
         }
@@ -73,7 +69,7 @@ public class GrenadeLogic : MonoBehaviour
             Debug.Log("GAME OVER MAN");
         }
 
-        if (_pushOutPin && ActivePin != null)
+        if (_pushOutPin && !IsAlive)
         {
             ActivePin.AddForce(ActivePin.rotation * -Vector3.up * 10, ForceMode.Force);
             _rigidbody.AddForceAtPosition(-transform.up * 10, PinHoleCenter.position, ForceMode.Force);

@@ -20,6 +20,8 @@ public class GrenadesController : MonoBehaviour
     {
         _spawnTimer = Time.time + SpawnTime / 3;
         _wokeTimer = Time.time + WokeTime;
+
+        _grenades.AddRange(GetComponentsInChildren<GrenadeLogic>());
     }
 
     public void Update()
@@ -54,7 +56,7 @@ public class GrenadesController : MonoBehaviour
     private void Woke()
     {
         var grenade = _grenades
-            .Where(x => x.ActivePin != null)
+            .Where(x => !x.IsAlive)
             .RandomOrDefault();
 
         if (grenade != null)
