@@ -23,7 +23,6 @@ public class PinHoleSuction : MonoBehaviour
             var point = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(holeCenter);
             var diff = point - holeCenter; 
             Debug.DrawLine(holeCenter, holeCenter + diff * 10, Color.black);
-            //Debug.Break();
             other.attachedRigidbody.AddForce((holeCenter - point).normalized*Force);
         }
     }

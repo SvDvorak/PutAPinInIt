@@ -1,6 +1,11 @@
 ﻿using Assets;
 using UnityEngine;
 
+public enum GrenadeSounds
+{
+    PinLocked
+}
+
 public class GrenadeLogic : MonoBehaviour
 {
     public bool StartWithPin;
@@ -23,6 +28,7 @@ public class GrenadeLogic : MonoBehaviour
     public bool IsAlive { get { return ActivePin == null && _rewokeTimer < Time.time; } }
 
     private bool _pushOutPin;
+    private SoundShotPlayer _soundShotPlayer;
 
     public void Start()
     {
@@ -32,6 +38,9 @@ public class GrenadeLogic : MonoBehaviour
         {
             Instantiate(PinTemplate, PinHoleCenter.position + PinHoleCenter.rotation * new Vector3(0, 1, 0), PinHoleCenter.rotation * Quaternion.Euler(0, 0, -90));
         }
+
+        _soundShotPlayer = GetComponent<SoundShotPlayer>();
+        _soundShotPlayer.PlaySound("Spawn");
     }
 
     public void Update()
@@ -58,11 +67,14 @@ public class GrenadeLogic : MonoBehaviour
         if (IsAlive && !TimerActive)
         {
             TimerActive = true;
+            _soundShotPlayer.PlayVoice("Woke");
+            _soundShotPlayer.PlaySound("WokeSound");
             _explodeTimer = Time.time + ExplodeTime;
         }
         if (!IsAlive && TimerActive)
         {
             TimerActive = false;
+            _soundShotPlayer.PlaySound("PinLocked");
             _rewokeTimer = Time.time + RewokeDelay;
         }
 
@@ -70,6 +82,8 @@ public class GrenadeLogic : MonoBehaviour
         {
             HasExploded = true;
             Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
+            _soundShotPlayer.PlayVoice("ExplosionVoice");
+            _soundShotPlayer.PlaySound("Explosion");
             GameState.GameOver = true;
         }
 
