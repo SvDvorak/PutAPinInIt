@@ -1,105 +1,14 @@
 fileFormatVersion: 2
-guid: 287b14b7256325145a102fef8dbb78d4
+guid: 3c215d161b362e740acdf20c7c8b79ff
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Armature
-    100004: Grenade
-    100006: Hand_1
-    100008: Hand_2
-    100010: hand_man_polySurface1_group1
-    100012: Index_1
-    100014: Index_2
-    100016: Index_3
-    100018: Index_control
-    100020: Middle_1
-    100022: Middle_2
-    100024: Middle_3
-    100026: Middle_control
-    100028: Pin
-    100030: Pinky_1
-    100032: Pinky_2
-    100034: Pinky_3
-    100036: Pinky_control
-    100038: PinRing
-    100040: Ring_1
-    100042: Ring_2
-    100044: Ring_3
-    100046: Ring_control
-    100048: Thumb_1
-    100050: Thumb_2
-    100052: Thumb_control
-    100054: Cube
-    100056: Box
-    100058: Plane
-    100060: Spoon
     400000: //RootNode
-    400002: Armature
-    400004: Grenade
-    400006: Hand_1
-    400008: Hand_2
-    400010: hand_man_polySurface1_group1
-    400012: Index_1
-    400014: Index_2
-    400016: Index_3
-    400018: Index_control
-    400020: Middle_1
-    400022: Middle_2
-    400024: Middle_3
-    400026: Middle_control
-    400028: Pin
-    400030: Pinky_1
-    400032: Pinky_2
-    400034: Pinky_3
-    400036: Pinky_control
-    400038: PinRing
-    400040: Ring_1
-    400042: Ring_2
-    400044: Ring_3
-    400046: Ring_control
-    400048: Thumb_1
-    400050: Thumb_2
-    400052: Thumb_control
-    400054: Cube
-    400056: Box
-    400058: Plane
-    400060: Spoon
-    2100000: unnamed
-    2100002: teeth_02_Under_JawSG
-    2100004: Pupil
-    2100006: EyeWhites
+    2100000: No Name
     2300000: //RootNode
-    2300002: Grenade
-    2300004: hand_man_polySurface1_group1
-    2300006: Pin
-    2300008: PinRing
-    2300010: Cube
-    2300012: Box
-    2300014: Plane
-    2300016: Spoon
     3300000: //RootNode
-    3300002: Grenade
-    3300004: hand_man_polySurface1_group1
-    3300006: Pin
-    3300008: PinRing
-    3300010: Cube
-    3300012: Box
-    3300014: Plane
-    3300016: Spoon
-    4300000: Sphere
-    4300002: hand_man_polySurface1_group1
-    4300004: Pin
-    4300006: PinRing
-    4300008: Grenade
-    4300010: Cube
-    4300012: Plane
-    4300014: Box
-    4300016: Spoon
-    7400000: Default Take
-    7400002: Idle
-    9500000: //RootNode
-    13700000: hand_man_polySurface1_group1
+    4300000: Spoon
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -152,7 +61,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -177,7 +86,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

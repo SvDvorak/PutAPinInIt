@@ -11,6 +11,7 @@ public class GrenadeLogic : MonoBehaviour
     public bool StartWithPin;
     public Transform PinHoleCenter;
     public GameObject Face;
+    public GameObject SpoonTemplate;
     public GameObject PinTemplate;
     public GameObject ExplosionPrefab;
 
@@ -22,6 +23,12 @@ public class GrenadeLogic : MonoBehaviour
 
     public float RewokeDelay;
     private float _rewokeTimer;
+    private bool _firstTimeWoke = true;
+
+    private readonly Vector3 _spoonOffset = new Vector3(0, -0.62f, 1.39f);
+    private readonly Vector3 _spoonRotation = new Vector3(0, 0, 180);
+    private FixedJoint _spoonJoint;
+    private Rigidbody _spoonRigidbody;
 
     private Rigidbody _rigidbody;
     public Rigidbody ActivePin;
@@ -42,6 +49,14 @@ public class GrenadeLogic : MonoBehaviour
 
         _soundShotPlayer = GetComponent<SoundShotPlayer>();
         _soundShotPlayer.PlaySound("Spawn");
+
+        _rewokeTimer = Time.time + RewokeDelay;
+
+        var spoon = Instantiate(SpoonTemplate, transform.position + transform.rotation * _spoonOffset, transform.rotation*Quaternion.Euler(_spoonRotation));
+        spoon.transform.parent = transform.parent;
+        _spoonJoint = gameObject.AddComponent<FixedJoint>();
+        _spoonRigidbody = spoon.GetComponent<Rigidbody>();
+        _spoonJoint.connectedBody = _spoonRigidbody;
     }
 
     public void Update()
@@ -51,8 +66,6 @@ public class GrenadeLogic : MonoBehaviour
         if (IsAlive)
         {
             var toCamera = Vector3.SignedAngle(transform.forward, Vector3.back, Vector3.up);
-            Debug.DrawRay(transform.position, transform.position + transform.forward, Color.white);
-            Debug.DrawRay(transform.position, transform.position + Vector3.back, Color.green);
             if (Mathf.Abs(toCamera) > 90)
                 _rigidbody.AddTorque(Vector3.up * toCamera * 0.05f, ForceMode.Force);
 
@@ -69,7 +82,18 @@ public class GrenadeLogic : MonoBehaviour
         {
             TimerActive = true;
             _soundShotPlayer.PlayVoice("Woke");
-            _soundShotPlayer.PlaySound("WokeSound");
+            if (_firstTimeWoke)
+            {
+                _firstTimeWoke = false;
+                Destroy(_spoonJoint);
+                _soundShotPlayer.PlaySound("WokeSpoonSound");
+                _spoonRigidbody.AddForce(-transform.up * 3, ForceMode.Impulse);
+            }
+            else
+            {
+                _soundShotPlayer.PlaySound("WokeSound");
+            }
+
             _explodeTimer = Time.time + ExplodeTime;
         }
         if (!IsAlive && TimerActive)
@@ -101,40 +125,6 @@ public class GrenadeLogic : MonoBehaviour
 
     public void Woke()
     {
-        //SetSuctionFieldActive(false);
-
-        // Gotta flip him up if he's pointing down
-        //var faceDownAngle = Mathf.Clamp(Vector3.Angle(transform.up, Vector3.down), 0, 180);
-        //var strength = (180 - faceDownAngle) / 180.0f;
-        //_rigidbody.AddTorque(transform.right*strength*3000, ForceMode.Impulse);
-
-        //Invoke("PushPinOut", 1);
         _pushOutPin = true;
-    }
-
-    //public void PushPinOut()
-    //{
-    //    if (ActivePin != null)
-    //    {
-    //        ActivePin.AddForce(ActivePin.rotation * -Vector3.up * 4, ForceMode.Impulse);
-    //    }
-    //}
-
-    //private void SetSuctionFieldActive(bool active)
-    //{
-    //    foreach (var suctionField in SuctionFields)
-    //    {
-    //        suctionField.SetActive(active);
-    //    }
-    //}
-}
-
-public static class WilDebug
-{
-    public static void DrawCoordinateSystem(Transform gameObject)
-    {
-        Debug.DrawLine(gameObject.position, gameObject.position + gameObject.rotation * Vector3.up, Color.red);
-        Debug.DrawLine(gameObject.position, gameObject.position + gameObject.rotation * Vector3.forward, Color.blue);
-        Debug.DrawLine(gameObject.position, gameObject.position + gameObject.rotation * Vector3.left, Color.green);
     }
 }
