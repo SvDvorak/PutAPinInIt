@@ -25,6 +25,7 @@ public class GrenadeLogic : MonoBehaviour
 
     private Rigidbody _rigidbody;
     public Rigidbody ActivePin;
+    public Rigidbody PinOnTheWayInShaft;
     public bool IsAlive { get { return ActivePin == null && _rewokeTimer < Time.time; } }
 
     private bool _pushOutPin;
@@ -89,7 +90,7 @@ public class GrenadeLogic : MonoBehaviour
 
         if (_pushOutPin && !IsAlive && ActivePin != null)
         {
-            ActivePin.AddForce(ActivePin.rotation * -Vector3.up * 10, ForceMode.Force);
+            ActivePin.AddForce(ActivePin.rotation * -Vector3.up * 6, ForceMode.Force);
             _rigidbody.AddForceAtPosition(-transform.up * 10, PinHoleCenter.position, ForceMode.Force);
         }
         else

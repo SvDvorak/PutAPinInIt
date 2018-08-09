@@ -70,8 +70,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4324231760528450}
   - component: {fileID: 114880584554871332}
-  - component: {fileID: 135954901309680588}
-  m_Layer: 0
+  - component: {fileID: 65401014642531482}
+  m_Layer: 12
   m_Name: suckZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,6 +128,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1699349605241678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4514065136034134}
+  - component: {fileID: 136019457687464978}
+  m_Layer: 12
+  m_Name: stage2Suck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1710669584625208
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,8 +153,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4692089752042052}
   - component: {fileID: 114070500457661748}
-  - component: {fileID: 135899237926345662}
-  m_Layer: 0
+  - component: {fileID: 65037604462664734}
+  m_Layer: 12
   m_Name: suckZone (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +234,7 @@ Transform:
   - {fileID: 4779219142259626}
   - {fileID: 4335247067412740}
   m_Father: {fileID: 4418477067896652}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4324231760528450
 Transform:
@@ -260,7 +276,7 @@ Transform:
   - {fileID: 4414486968255524}
   - {fileID: 4533884464128474}
   m_Father: {fileID: 4418477067896652}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4414486968255524
 Transform:
@@ -287,11 +303,25 @@ Transform:
   m_Children:
   - {fileID: 4324231760528450}
   - {fileID: 4692089752042052}
+  - {fileID: 4514065136034134}
+  - {fileID: 4269537533300842}
   - {fileID: 4716723505880350}
   - {fileID: 4368023138966500}
-  - {fileID: 4269537533300842}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4514065136034134
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1699349605241678}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.2459998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4418477067896652}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4533884464128474
 Transform:
@@ -343,7 +373,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4418477067896652}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4779219142259626
 Transform:
@@ -415,6 +445,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65037604462664734
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1710669584625208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: -0.15, z: 0}
 --- !u!65 &65179265945759200
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -427,6 +469,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.75199604, y: 0.77063197, z: 0.21967033}
   m_Center: {x: 0.003494256, y: 0.0040649413, z: 1.0322758}
+--- !u!65 &65401014642531482
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1371664243653428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!65 &65471533962976764
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -793,7 +847,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoleCenter: {fileID: 4716723505880350}
-  Force: 12
+  Force: 4
+  Pins: 0
 --- !u!114 &114512998486245254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -914,7 +969,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoleCenter: {fileID: 4716723505880350}
-  Force: 12
+  Force: 4
+  Pins: 0
 --- !u!114 &114887641223178618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -938,6 +994,7 @@ MonoBehaviour:
   HasExploded: 0
   RewokeDelay: 3
   ActivePin: {fileID: 0}
+  PinOnTheWayInShaft: {fileID: 0}
 --- !u!135 &135467042639172710
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -962,29 +1019,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.63
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135899237926345662
-SphereCollider:
+--- !u!136 &136019457687464978
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1710669584625208}
+  m_GameObject: {fileID: 1699349605241678}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.26
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135954901309680588
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1371664243653428}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.26
+  m_Radius: 0.14
+  m_Height: 0.79
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136104981270899456
 CapsuleCollider:

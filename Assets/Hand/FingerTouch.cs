@@ -4,6 +4,12 @@ public class FingerTouch : MonoBehaviour
 {
     public bool IsOnFinger;
     private int _fingerCollidersTouching;
+    private PinState _pinState;
+
+    public void Start()
+    {
+        _pinState = GetComponentInParent<PinState>();
+    }
 
     public void OnTriggerEnter(Collider other)
     {
@@ -25,6 +31,6 @@ public class FingerTouch : MonoBehaviour
 
     private void UpdateIsOnFinger()
     {
-        IsOnFinger = _fingerCollidersTouching > 0;
+        _pinState.IsOnFinger = _fingerCollidersTouching > 0;
     }
 }

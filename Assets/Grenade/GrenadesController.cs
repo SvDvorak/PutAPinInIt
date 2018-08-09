@@ -77,6 +77,6 @@ public static class EnumerableExtensions
     public static T RandomOrDefault<T>(this IEnumerable<T> enumerable) where T : class
     {
         var list = enumerable.ToList();
-        return list.Count == 0 ? null : list[Random.Range(0, list.Count - 1)];
+        return list.Count == 0 ? null : list[Random.Range(0, list.Count)];
     }
 }

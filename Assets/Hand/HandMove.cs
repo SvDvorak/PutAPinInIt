@@ -3,27 +3,31 @@ using UnityEngine;
 
 public class HandMove : MonoBehaviour
 {
-    private Vector3 _previousMousePosition;
     private Rigidbody _rigidBody;
+    private bool _disable;
 
     public void Start()
     {
         _rigidBody = GetComponent<Rigidbody>();
-        _previousMousePosition = Input.mousePosition;
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     public void Update()
     {
-        if (GameState.GameOver)
+        if (Input.GetKeyDown(KeyCode.Escape))
+            _disable = true;
+
+        if (Input.GetMouseButtonDown(0))
+            _disable = false;
+
+        if (GameState.GameOver || _disable)
             return;
 
-        var mousePosition = Input.mousePosition;
-        var mouseDelta = (mousePosition - _previousMousePosition) * 0.01f;
-        _previousMousePosition = mousePosition;
+        var mouseX = Input.GetAxis("Mouse X");
+        var mouseY = Input.GetAxis("Mouse Y");
 
-        var height = Input.mouseScrollDelta.y*0.1f;
-        _rigidBody.MovePosition(_rigidBody.position + new Vector3(mouseDelta.x, height, mouseDelta.y));
+        var height = Input.mouseScrollDelta.y;
+        _rigidBody.MovePosition(_rigidBody.position + new Vector3(mouseX, height, mouseY)*0.1f);
     }
 }

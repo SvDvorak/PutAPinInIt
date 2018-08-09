@@ -353,6 +353,8 @@ GameObject:
   - component: {fileID: 23779102475774762}
   - component: {fileID: 54011546861482830}
   - component: {fileID: 59829417054734210}
+  - component: {fileID: 135558325099608244}
+  - component: {fileID: 114609250835867798}
   m_Layer: 10
   m_Name: pinRing
   m_TagString: Untagged
@@ -552,15 +554,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1234298661656702}
-  m_LocalRotation: {x: -0.04517562, y: 0.14250644, z: 0.051794622, w: 0.9874049}
-  m_LocalPosition: {x: -10.897034, y: -10.925606, z: 1.9384336}
+  m_LocalRotation: {x: -0.021993045, y: -0.6715574, z: 0.067679256, w: 0.73752725}
+  m_LocalPosition: {x: 4.44, y: 0.77, z: 0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4294840905305752}
   - {fileID: 4279426670470350}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -5.9680004, y: 16.156, z: 5.1580005}
+  m_LocalEulerAnglesHint: {x: 3.351, y: -84.421005, z: 7.4460006}
 --- !u!4 &4704276139171614
 Transform:
   m_ObjectHideFlags: 1
@@ -787,9 +789,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1969755628406480}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.05
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.03
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -820,7 +822,7 @@ HingeJoint:
   m_Anchor: {x: 0.41, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000005401671, y: -0.16, z: -0.00000031478703}
+  m_ConnectedAnchor: {x: 0, y: -0.16000003, z: 0.000000026077032}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -842,8 +844,8 @@ HingeJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
+  m_MassScale: 0.1
+  m_ConnectedMassScale: 0.1
 --- !u!114 &114398502105729902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -856,8 +858,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsLockedInGrenade: 0
-  IsMovingABunch: 0
-  PinRigidbody: {fileID: 54212111630971010}
+  IsOnFinger: 0
+--- !u!114 &114609250835867798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1969755628406480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4327352c1cb0aa04f87faab2bf59cfac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsOnFinger: 0
+--- !u!135 &135558325099608244
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1969755628406480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.31
+  m_Center: {x: 0, y: 0.00000011920929, z: 0.00000011920929}
 --- !u!136 &136056395262692466
 CapsuleCollider:
   m_ObjectHideFlags: 1
