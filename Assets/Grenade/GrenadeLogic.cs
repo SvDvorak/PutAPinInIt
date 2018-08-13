@@ -1,11 +1,6 @@
 ﻿using Assets;
 using UnityEngine;
 
-public enum GrenadeSounds
-{
-    PinLocked
-}
-
 public class GrenadeLogic : MonoBehaviour
 {
     public bool StartWithPin;
@@ -44,19 +39,21 @@ public class GrenadeLogic : MonoBehaviour
 
         if (StartWithPin)
         {
-            Instantiate(PinTemplate, PinHoleCenter.position + PinHoleCenter.rotation * new Vector3(0, 1, 0), PinHoleCenter.rotation * Quaternion.Euler(0, 0, -90));
+            var spawnParent = GameObject.Find("stuff").transform;
+            var pin = Instantiate(PinTemplate, PinHoleCenter.position + PinHoleCenter.rotation * new Vector3(0, 1, 0), PinHoleCenter.rotation * Quaternion.Euler(-90, 0, 0));
+            pin.transform.parent = spawnParent;
+
+            var spoon = Instantiate(SpoonTemplate, transform.position + transform.rotation * _spoonOffset, transform.rotation*Quaternion.Euler(_spoonRotation));
+            spoon.transform.parent = spawnParent;
+            _spoonJoint = gameObject.AddComponent<FixedJoint>();
+            _spoonRigidbody = spoon.GetComponent<Rigidbody>();
+            _spoonJoint.connectedBody = _spoonRigidbody;
         }
 
         _soundShotPlayer = GetComponent<SoundShotPlayer>();
         _soundShotPlayer.PlaySound("Spawn");
 
         _rewokeTimer = Time.time + RewokeDelay;
-
-        var spoon = Instantiate(SpoonTemplate, transform.position + transform.rotation * _spoonOffset, transform.rotation*Quaternion.Euler(_spoonRotation));
-        spoon.transform.parent = transform.parent;
-        _spoonJoint = gameObject.AddComponent<FixedJoint>();
-        _spoonRigidbody = spoon.GetComponent<Rigidbody>();
-        _spoonJoint.connectedBody = _spoonRigidbody;
     }
 
     public void Update()
@@ -114,7 +111,7 @@ public class GrenadeLogic : MonoBehaviour
 
         if (_pushOutPin && !IsAlive && ActivePin != null)
         {
-            ActivePin.AddForce(ActivePin.rotation * -Vector3.up * 6, ForceMode.Force);
+            ActivePin.AddForce(ActivePin.rotation * Vector3.forward * 6, ForceMode.Force);
             _rigidbody.AddForceAtPosition(-transform.up * 10, PinHoleCenter.position, ForceMode.Force);
         }
         else

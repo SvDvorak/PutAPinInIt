@@ -34,6 +34,11 @@ ModelImporter:
     100056: Box
     100058: Plane
     100060: Spoon
+    100062: Key
+    100064: KeyTracks
+    100066: PinRing_001
+    100068: Circle
+    100070: Keyfob
     400000: //RootNode
     400002: Armature
     400004: Grenade
@@ -65,6 +70,11 @@ ModelImporter:
     400056: Box
     400058: Plane
     400060: Spoon
+    400062: Key
+    400064: KeyTracks
+    400066: PinRing_001
+    400068: Circle
+    400070: Keyfob
     2100000: unnamed
     2100002: teeth_02_Under_JawSG
     2100004: Pupil
@@ -78,6 +88,11 @@ ModelImporter:
     2300012: Box
     2300014: Plane
     2300016: Spoon
+    2300018: Key
+    2300020: KeyTracks
+    2300022: PinRing_001
+    2300024: Circle
+    2300026: Keyfob
     3300000: //RootNode
     3300002: Grenade
     3300004: hand_man_polySurface1_group1
@@ -87,6 +102,11 @@ ModelImporter:
     3300012: Box
     3300014: Plane
     3300016: Spoon
+    3300018: Key
+    3300020: KeyTracks
+    3300022: PinRing_001
+    3300024: Circle
+    3300026: Keyfob
     4300000: Sphere
     4300002: hand_man_polySurface1_group1
     4300004: Pin
@@ -96,6 +116,11 @@ ModelImporter:
     4300012: Plane
     4300014: Box
     4300016: Spoon
+    4300018: KeyTracks
+    4300020: Key
+    4300022: PinRing_001
+    4300024: Circle
+    4300026: Keyfob
     7400000: Default Take
     7400002: Idle
     9500000: //RootNode

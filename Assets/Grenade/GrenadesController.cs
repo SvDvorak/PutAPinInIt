@@ -16,13 +16,15 @@ public class GrenadesController : MonoBehaviour
 
     private float _spawnTimer;
     private float _wokeTimer;
+    private Transform _spawnParent;
 
     public void Start()
     {
         _spawnTimer = 0;
         _wokeTimer = Time.time + WokeTime / 3.0f;
 
-        _grenades.AddRange(GetComponentsInChildren<GrenadeLogic>());
+        _spawnParent = GameObject.Find("stuff").transform;
+        _grenades.AddRange(_spawnParent.GetComponentsInChildren<GrenadeLogic>());
         GameState.GrenadesSpawned = _grenades.Count;
     }
 
@@ -50,7 +52,7 @@ public class GrenadesController : MonoBehaviour
         var spawn = Random.value > 0.5f ? Spawn1 : Spawn2;
 
         var grenade = Instantiate(GrenadeTemplate, spawn.position, Quaternion.identity);
-        grenade.transform.parent = transform;
+        grenade.transform.parent = _spawnParent;
         var rigidBody = grenade.GetComponent<Rigidbody>();
         var grenadeLogic = grenade.GetComponent<GrenadeLogic>();
         _grenades.Add(grenadeLogic);

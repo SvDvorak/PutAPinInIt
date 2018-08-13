@@ -31,6 +31,7 @@ public class FingerTouch : MonoBehaviour
 
     private void UpdateIsOnFinger()
     {
-        _pinState.IsOnFinger = _fingerCollidersTouching > 0;
+        if(_pinState != null)
+            _pinState.IsOnFinger = _fingerCollidersTouching > 0;
     }
 }
