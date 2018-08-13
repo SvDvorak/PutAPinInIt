@@ -4,8 +4,6 @@ public class PickupPin : MonoBehaviour
 {
     public Transform FingerPinHangPoint;
 
-    private Rigidbody _movingBody;
-
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 10)
@@ -13,7 +11,6 @@ public class PickupPin : MonoBehaviour
             var pinState = other.gameObject.GetComponentInParent<PinState>();
             if(pinState == null || !pinState.IsLockedInGrenade)
             {
-                Debug.Log(other.bounds);
                 var ring = other.attachedRigidbody;
                 var previousRingPosition = ring.position;
 

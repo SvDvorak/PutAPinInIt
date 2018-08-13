@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class FaceAnimator : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class FaceAnimator : MonoBehaviour
 
     private float _blinkTimer;
 
-    private int _pinsInProximity;
+    private List<PinState> _pinsInProximity = new List<PinState>();
 
     public void Start()
     {
@@ -18,6 +19,17 @@ public class FaceAnimator : MonoBehaviour
 
     public void Update()
     {
+        var isAnyPinOnFinger = false;
+        foreach (var pin in _pinsInProximity)
+        {
+            if (pin.IsOnFinger)
+                isAnyPinOnFinger = true;
+        }
+
+        EyeLeft.SetBool("angry", isAnyPinOnFinger);
+        EyeRight.SetBool("angry", isAnyPinOnFinger);
+        Mouth.SetBool("angry", isAnyPinOnFinger);
+
         if (_blinkTimer < Time.time)
         {
             EyeLeft.ResetTrigger("blink");
@@ -31,22 +43,11 @@ public class FaceAnimator : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        _pinsInProximity += 1;
-
-        EyeLeft.SetBool("angry", true);
-        EyeRight.SetBool("angry", true);
-        Mouth.SetBool("angry", true);
+        _pinsInProximity.Add(other.GetComponentInParent<PinState>());
     }
 
     public void OnTriggerExit(Collider other)
     {
-        _pinsInProximity -= 1;
-
-        if (_pinsInProximity <= 0)
-        {
-            EyeLeft.SetBool("angry", false);
-            EyeRight.SetBool("angry", false);
-            Mouth.SetBool("angry", false);
-        }
+        _pinsInProximity.Remove(other.GetComponentInParent<PinState>());
     }
 }
