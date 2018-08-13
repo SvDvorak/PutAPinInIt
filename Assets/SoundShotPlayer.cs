@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -20,7 +21,7 @@ public class SoundShotPlayer : MonoBehaviour
     public AudioSource VoiceSource;
     public AudioSource SoundSource;
 
-    public SoundGroup[] SoundGroups;
+    public List<SoundGroup> SoundGroups;
 
     public void PlayVoice(string voice)
     {

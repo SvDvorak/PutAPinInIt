@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class FaceAnimator : MonoBehaviour
+public class FaceController : MonoBehaviour
 {
     public Animator EyeLeft;
     public Animator EyeRight;
@@ -10,7 +10,8 @@ public class FaceAnimator : MonoBehaviour
 
     private float _blinkTimer;
 
-    private List<PinState> _pinsInProximity = new List<PinState>();
+    private readonly List<PinState> _pinsInProximity = new List<PinState>();
+    private bool _doingVoice;
 
     public void Start()
     {
@@ -30,6 +31,10 @@ public class FaceAnimator : MonoBehaviour
         EyeRight.SetBool("angry", isAnyPinOnFinger);
         Mouth.SetBool("angry", isAnyPinOnFinger);
 
+        EyeLeft.SetBool("talking", _doingVoice);
+        EyeRight.SetBool("talking", _doingVoice);
+        Mouth.SetBool("talking", _doingVoice);
+
         if (_blinkTimer < Time.time)
         {
             EyeLeft.ResetTrigger("blink");
@@ -39,6 +44,17 @@ public class FaceAnimator : MonoBehaviour
             EyeRight.SetTrigger("blink");
             _blinkTimer = Time.time + BlinkTime * (0.8f + Random.value);
         }
+    }
+
+    [ExposeMethodInEditor]
+    public void Talk()
+    {
+        _doingVoice = true;
+    }
+
+    public void AngryShout()
+    {
+        _doingVoice = true;
     }
 
     public void OnTriggerEnter(Collider other)
