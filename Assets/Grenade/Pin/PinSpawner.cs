@@ -60,7 +60,7 @@ public class PinSpawner : MonoBehaviour
             _pins.Remove(other.attachedRigidbody);
     }
 
-    [ExposeMethodInEditor]
+    [ContextMenu("Spawn")]
     public void Spawn()
     {
         var spawn = Random.value > 0.5f ? Spawn1 : Spawn2;

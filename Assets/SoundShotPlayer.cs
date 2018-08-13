@@ -22,6 +22,7 @@ public class SoundShotPlayer : MonoBehaviour
     public AudioSource SoundSource;
 
     public List<SoundGroup> SoundGroups;
+    public bool IsPlayingVoice { get { return VoiceSource.isPlaying; } }
 
     public void PlayVoice(string voice)
     {

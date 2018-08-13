@@ -12,24 +12,29 @@ public class FaceController : MonoBehaviour
 
     private readonly List<PinState> _pinsInProximity = new List<PinState>();
     private bool _doingVoice;
+    private SoundShotPlayer _soundShotPlayer;
+    private bool _isAngry;
 
     public void Start()
     {
         _blinkTimer = BlinkTime;
+        _soundShotPlayer = GetComponentInParent<SoundShotPlayer>();
     }
 
     public void Update()
     {
-        var isAnyPinOnFinger = false;
+        _isAngry = false;
         foreach (var pin in _pinsInProximity)
         {
             if (pin.IsOnFinger)
-                isAnyPinOnFinger = true;
+                _isAngry = true;
         }
 
-        EyeLeft.SetBool("angry", isAnyPinOnFinger);
-        EyeRight.SetBool("angry", isAnyPinOnFinger);
-        Mouth.SetBool("angry", isAnyPinOnFinger);
+        EyeLeft.SetBool("angry", _isAngry);
+        EyeRight.SetBool("angry", _isAngry);
+        Mouth.SetBool("angry", _isAngry);
+
+        _doingVoice = _soundShotPlayer.IsPlayingVoice;
 
         EyeLeft.SetBool("talking", _doingVoice);
         EyeRight.SetBool("talking", _doingVoice);
@@ -46,15 +51,10 @@ public class FaceController : MonoBehaviour
         }
     }
 
-    [ExposeMethodInEditor]
+    [ContextMenu("Talk")]
     public void Talk()
     {
-        _doingVoice = true;
-    }
-
-    public void AngryShout()
-    {
-        _doingVoice = true;
+        _soundShotPlayer.PlayVoice(_isAngry ? "AngryChat" : "IdleChat");
     }
 
     public void OnTriggerEnter(Collider other)

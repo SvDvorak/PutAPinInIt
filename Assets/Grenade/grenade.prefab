@@ -879,7 +879,7 @@ MonoBehaviour:
   - Name: Spawn
     Clips:
     - {fileID: 8300000, guid: c77e7b20d562a8443bc3b5ae95b08d33, type: 3}
-  - Name: Idle_chat
+  - Name: IdleChat
     Clips:
     - {fileID: 8300000, guid: 7318fdb1a7609094a8822e98059233dc, type: 3}
     - {fileID: 8300000, guid: f6e75b36f6db7bc42af5b16bda93cce2, type: 3}
@@ -890,7 +890,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 4af5aec8b022b9c499bfdae7ab7bc0e8, type: 3}
     - {fileID: 8300000, guid: ed227e43ba7239e42ac6b135b8a869f8, type: 3}
     - {fileID: 8300000, guid: c548ec3c68c6ba545b9594f1f24b6770, type: 3}
-  - Name: Angry_chat
+  - Name: AngryChat
     Clips:
     - {fileID: 8300000, guid: 6670f71cb4a588d488de6421710623cd, type: 3}
     - {fileID: 8300000, guid: e2c61d42f6b5210429d4ce98f79119cd, type: 3}
@@ -994,6 +994,7 @@ MonoBehaviour:
     type: 2}
   ExplosionPrefab: {fileID: 1266901156150754, guid: c45799fdd61da6f4fae3881cc0b9624e,
     type: 2}
+  FaceController: {fileID: 114813228180741684}
   ExplodeTime: 20
   TimerActive: 0
   HasExploded: 0

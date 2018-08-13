@@ -12,7 +12,7 @@ public class GrenadesController : MonoBehaviour
     public Transform Spawn1;
     public Transform Spawn2;
 
-    private readonly List<GrenadeLogic> _grenades = new List<GrenadeLogic>();
+    public readonly List<GrenadeLogic> Grenades = new List<GrenadeLogic>();
 
     private float _spawnTimer;
     private float _wokeTimer;
@@ -24,8 +24,8 @@ public class GrenadesController : MonoBehaviour
         _wokeTimer = Time.time + WokeTime / 3.0f;
 
         _spawnParent = GameObject.Find("stuff").transform;
-        _grenades.AddRange(_spawnParent.GetComponentsInChildren<GrenadeLogic>());
-        GameState.GrenadesSpawned = _grenades.Count;
+        Grenades.AddRange(_spawnParent.GetComponentsInChildren<GrenadeLogic>());
+        GameState.GrenadesSpawned = Grenades.Count;
     }
 
     public void Update()
@@ -46,7 +46,7 @@ public class GrenadesController : MonoBehaviour
         }
     }
 
-    [ExposeMethodInEditor]
+    [ContextMenu("Spawn")]
     public void Spawn()
     {
         var spawn = Random.value > 0.5f ? Spawn1 : Spawn2;
@@ -55,17 +55,17 @@ public class GrenadesController : MonoBehaviour
         grenade.transform.parent = _spawnParent;
         var rigidBody = grenade.GetComponent<Rigidbody>();
         var grenadeLogic = grenade.GetComponent<GrenadeLogic>();
-        _grenades.Add(grenadeLogic);
+        Grenades.Add(grenadeLogic);
         GameState.GrenadesSpawned += 1;
 
         rigidBody.AddForce((spawn.right + Vector3.up) * Force, ForceMode.Impulse);
         rigidBody.AddTorque(Random.insideUnitSphere * 3, ForceMode.Impulse);
     }
 
-    [ExposeMethodInEditor]
+    [ContextMenu("Woke")]
     public void Woke()
     {
-        var grenade = _grenades
+        var grenade = Grenades
             .Where(x => !x.IsAlive)
             .RandomOrDefault();
 

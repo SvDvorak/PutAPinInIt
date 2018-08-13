@@ -9,6 +9,7 @@ public class GrenadeLogic : MonoBehaviour
     public GameObject SpoonTemplate;
     public GameObject PinTemplate;
     public GameObject ExplosionPrefab;
+    public FaceController FaceController;
 
     public float ExplodeTime;
     [HideInInspector]
@@ -123,5 +124,10 @@ public class GrenadeLogic : MonoBehaviour
     public void Woke()
     {
         _pushOutPin = true;
+    }
+
+    public void Talk()
+    {
+        FaceController.Talk();
     }
 }
