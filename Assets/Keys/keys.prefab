@@ -79,6 +79,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4114309158203538}
+  - component: {fileID: 114530630535117556}
   m_Layer: 0
   m_Name: keys
   m_TagString: Untagged
@@ -1168,6 +1169,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4327352c1cb0aa04f87faab2bf59cfac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsOnFinger: 0
+--- !u!114 &114530630535117556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1161964827301652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90adc1878c2aee5419df1fa4e9ca2fd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsGrenadePin: 0
+  IsLockedInGrenade: 0
   IsOnFinger: 0
 --- !u!135 &135490358853815184
 SphereCollider:

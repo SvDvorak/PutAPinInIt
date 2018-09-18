@@ -9,7 +9,7 @@ public class PickupPin : MonoBehaviour
         if (other.gameObject.layer == 10)
         {
             var pinState = other.gameObject.GetComponentInParent<PinState>();
-            if(pinState == null || !pinState.IsLockedInGrenade)
+            if(pinState == null || !pinState.IsLockedInGrenade && !pinState.IsOnFinger)
             {
                 var ring = other.attachedRigidbody;
                 var previousRingPosition = ring.position;
