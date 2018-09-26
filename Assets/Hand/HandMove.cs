@@ -19,8 +19,8 @@ public class HandMove : MonoBehaviour
         Cursor.visible = false;
         _minX = -6.7f;
         _maxX = 4.3f;
-        _minY = 0.15f;
-        _maxY = 1.9f;
+        _minY = 0.2f;
+        _maxY = 4f;
         _minZ = -9.7f;
         _maxZ = -2f;
     }
