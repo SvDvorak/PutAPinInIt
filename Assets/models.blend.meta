@@ -39,6 +39,22 @@ ModelImporter:
     100066: PinRing_001
     100068: Circle
     100070: Keyfob
+    100072: Bolt
+    100074: Connection
+    100076: Cylinder
+    100078: NurbsCircle
+    100080: PrintSpool
+    100082: SolderingStation
+    100084: Table
+    100086: Toolbox
+    100088: TwistKnob_004
+    100090: Cable
+    100092: Cable_001
+    100094: Cable_002
+    100096: Cable_003
+    100098: Bolt_001
+    100100: Bolt_002
+    100102: Cylinder_001
     400000: //RootNode
     400002: Armature
     400004: Grenade
@@ -75,10 +91,29 @@ ModelImporter:
     400066: PinRing_001
     400068: Circle
     400070: Keyfob
+    400072: Bolt
+    400074: Connection
+    400076: Cylinder
+    400078: NurbsCircle
+    400080: PrintSpool
+    400082: SolderingStation
+    400084: Table
+    400086: Toolbox
+    400088: TwistKnob_004
+    400090: Cable
+    400092: Cable_001
+    400094: Cable_002
+    400096: Cable_003
+    400098: Bolt_001
+    400100: Bolt_002
+    400102: Cylinder_001
     2100000: unnamed
     2100002: teeth_02_Under_JawSG
     2100004: Pupil
     2100006: EyeWhites
+    2100008: BlackPlastic
+    2100010: PrusaOrange
+    2100012: BlackPlastic_001
     2300000: //RootNode
     2300002: Grenade
     2300004: hand_man_polySurface1_group1
@@ -93,6 +128,22 @@ ModelImporter:
     2300022: PinRing_001
     2300024: Circle
     2300026: Keyfob
+    2300028: Bolt
+    2300030: Connection
+    2300032: Cylinder
+    2300034: NurbsCircle
+    2300036: PrintSpool
+    2300038: SolderingStation
+    2300040: Table
+    2300042: Toolbox
+    2300044: TwistKnob_004
+    2300046: Cable
+    2300048: Cable_001
+    2300050: Cable_002
+    2300052: Cable_003
+    2300054: Bolt_001
+    2300056: Bolt_002
+    2300058: Cylinder_001
     3300000: //RootNode
     3300002: Grenade
     3300004: hand_man_polySurface1_group1
@@ -107,6 +158,22 @@ ModelImporter:
     3300022: PinRing_001
     3300024: Circle
     3300026: Keyfob
+    3300028: Bolt
+    3300030: Connection
+    3300032: Cylinder
+    3300034: NurbsCircle
+    3300036: PrintSpool
+    3300038: SolderingStation
+    3300040: Table
+    3300042: Toolbox
+    3300044: TwistKnob_004
+    3300046: Cable
+    3300048: Cable_001
+    3300050: Cable_002
+    3300052: Cable_003
+    3300054: Bolt_001
+    3300056: Bolt_002
+    3300058: Cylinder_001
     4300000: Sphere
     4300002: hand_man_polySurface1_group1
     4300004: Pin
@@ -121,10 +188,27 @@ ModelImporter:
     4300022: PinRing_001
     4300024: Circle
     4300026: Keyfob
+    4300028: SolderingStation
+    4300030: Connection
+    4300032: Cylinder
+    4300034: Bolt
+    4300036: Toolbox
+    4300038: Table
+    4300040: PrintSpool
+    4300042: NurbsCircle
+    4300044: TwistKnob_004
+    4300046: Cable_003
+    4300048: Cable
+    4300050: Cable_002
+    4300052: Cable_001
+    4300054: Bolt_002
+    4300056: Bolt_001
+    4300058: Cylinder_001
     7400000: Default Take
     7400002: Idle
     9500000: //RootNode
     13700000: hand_man_polySurface1_group1
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1

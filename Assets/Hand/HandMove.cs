@@ -22,7 +22,7 @@ public class HandMove : MonoBehaviour
         _minY = 0.2f;
         _maxY = 4f;
         _minZ = -9.7f;
-        _maxZ = -2f;
+        _maxZ = -2.3f;
     }
 
     public void Update()

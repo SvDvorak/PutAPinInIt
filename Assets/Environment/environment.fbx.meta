@@ -1,0 +1,287 @@
+fileFormatVersion: 2
+guid: 9543a87eee251e64c83899da6f94f94e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bolt.001
+    100002: Bolt.002
+    100004: Box
+    100006: Cable
+    100008: Cable.001
+    100010: Cable.002
+    100012: Cable.003
+    100014: Connection
+    100016: Cylinder.001
+    100018: //RootNode
+    100020: PrintSpool
+    100022: SolderingStation
+    100024: Table
+    100026: Toolbox
+    100028: TwistKnob.004
+    100030: Armature
+    100032: Bolt
+    100034: Camera
+    100036: Cylinder
+    100038: Grenade
+    100040: Hand_1
+    100042: Hand_2
+    100044: hand_man:polySurface1 group1
+    100046: Index_1
+    100048: Index_2
+    100050: Index_3
+    100052: Index_3_end
+    100054: Index_control
+    100056: Index_control_end
+    100058: Key
+    100060: Keyfob
+    100062: KeyTracks
+    100064: Middle_1
+    100066: Middle_2
+    100068: Middle_3
+    100070: Middle_3_end
+    100072: Middle_control
+    100074: Middle_control_end
+    100076: Pin
+    100078: Pinky_1
+    100080: Pinky_2
+    100082: Pinky_3
+    100084: Pinky_3_end
+    100086: Pinky_control
+    100088: Pinky_control_end
+    100090: PinRing
+    100092: PinRing.001
+    100094: Point
+    100096: Ring_1
+    100098: Ring_2
+    100100: Ring_3
+    100102: Ring_3_end
+    100104: Ring_control
+    100106: Ring_control_end
+    100108: Spoon
+    100110: Thumb_1
+    100112: Thumb_2
+    100114: Thumb_2_end
+    100116: Thumb_control
+    100118: Thumb_control_end
+    400000: Bolt.001
+    400002: Bolt.002
+    400004: Box
+    400006: Cable
+    400008: Cable.001
+    400010: Cable.002
+    400012: Cable.003
+    400014: Connection
+    400016: Cylinder.001
+    400018: //RootNode
+    400020: PrintSpool
+    400022: SolderingStation
+    400024: Table
+    400026: Toolbox
+    400028: TwistKnob.004
+    400030: Armature
+    400032: Bolt
+    400034: Camera
+    400036: Cylinder
+    400038: Grenade
+    400040: Hand_1
+    400042: Hand_2
+    400044: hand_man:polySurface1 group1
+    400046: Index_1
+    400048: Index_2
+    400050: Index_3
+    400052: Index_3_end
+    400054: Index_control
+    400056: Index_control_end
+    400058: Key
+    400060: Keyfob
+    400062: KeyTracks
+    400064: Middle_1
+    400066: Middle_2
+    400068: Middle_3
+    400070: Middle_3_end
+    400072: Middle_control
+    400074: Middle_control_end
+    400076: Pin
+    400078: Pinky_1
+    400080: Pinky_2
+    400082: Pinky_3
+    400084: Pinky_3_end
+    400086: Pinky_control
+    400088: Pinky_control_end
+    400090: PinRing
+    400092: PinRing.001
+    400094: Point
+    400096: Ring_1
+    400098: Ring_2
+    400100: Ring_3
+    400102: Ring_3_end
+    400104: Ring_control
+    400106: Ring_control_end
+    400108: Spoon
+    400110: Thumb_1
+    400112: Thumb_2
+    400114: Thumb_2_end
+    400116: Thumb_control
+    400118: Thumb_control_end
+    2000000: Camera
+    2100000: No Name
+    2100002: BlackPlastic.001
+    2100004: teeth_02_Under_JawSG
+    2300000: Bolt.001
+    2300002: Bolt.002
+    2300004: Box
+    2300006: Cable
+    2300008: Cable.001
+    2300010: Cable.002
+    2300012: Cable.003
+    2300014: Connection
+    2300016: Cylinder.001
+    2300018: PrintSpool
+    2300020: SolderingStation
+    2300022: Table
+    2300024: Toolbox
+    2300026: TwistKnob.004
+    2300028: Bolt
+    2300030: Cylinder
+    2300032: Grenade
+    2300034: hand_man:polySurface1 group1
+    2300036: Key
+    2300038: Keyfob
+    2300040: KeyTracks
+    2300042: Pin
+    2300044: PinRing
+    2300046: PinRing.001
+    2300048: Spoon
+    3300000: Bolt.001
+    3300002: Bolt.002
+    3300004: Box
+    3300006: Cable
+    3300008: Cable.001
+    3300010: Cable.002
+    3300012: Cable.003
+    3300014: Connection
+    3300016: Cylinder.001
+    3300018: PrintSpool
+    3300020: SolderingStation
+    3300022: Table
+    3300024: Toolbox
+    3300026: TwistKnob.004
+    3300028: Bolt
+    3300030: Cylinder
+    3300032: Grenade
+    3300034: hand_man:polySurface1 group1
+    3300036: Key
+    3300038: Keyfob
+    3300040: KeyTracks
+    3300042: Pin
+    3300044: PinRing
+    3300046: PinRing.001
+    3300048: Spoon
+    4300000: Bolt.002
+    4300002: Cylinder.001
+    4300004: Cable.003
+    4300006: Cable
+    4300008: SolderingStation
+    4300010: Cable.002
+    4300012: Connection
+    4300014: TwistKnob.004
+    4300016: Toolbox
+    4300018: Table
+    4300020: Box
+    4300022: PrintSpool
+    4300024: Cable.001
+    4300026: Cylinder
+    4300028: Keyfob
+    4300030: KeyTracks
+    4300032: Key
+    4300034: PinRing.001
+    4300036: Spoon
+    4300038: hand_man:polySurface1 group1
+    4300040: Pin
+    4300042: PinRing
+    4300044: Grenade
+    10800000: Point
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
